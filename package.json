@@ -1,6 +1,6 @@
 {
   "name": "node-jasperstarter",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "generate jasper report by jasperstarter",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/409-TW/node-jasperstarter.git"
   },
   "keywords": [
-    "jasper"
+    "jasper", "report", "JasperReports", "pdf", "xlsx", "docx", "pptx"
   ],
   "author": "Hasegawa Shiro",
   "license": "Apache-2.0",
