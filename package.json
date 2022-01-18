@@ -1,0 +1,22 @@
+{
+  "name": "node-jasperstarter",
+  "version": "1.0.0",
+  "description": "generate jasper report by jasperstarter",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/409-TW/node-jasperstarter.git"
+  },
+  "keywords": [
+    "jasper"
+  ],
+  "author": "Hasegawa Shiro",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/409-TW/node-jasperstarter/issues"
+  },
+  "homepage": "https://github.com/409-TW/node-jasperstarter#readme"
+}
