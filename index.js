@@ -19,13 +19,14 @@ module.exports = {
       "-t", type,
       "--data-file", input
     ])
+    let errorMessages = ""
 
     processing.stdout.on('data', (data) => {
       if (data) console.log(`stdout: ${data}`);
     })
 
     processing.stderr.on('data', (data) => {
-      if (data) console.error(`stderr: ${data}`)
+      errorMessages += data + "\r\n"
     })
 
     const generated = new Promise((resolve, reject) => {
@@ -34,10 +35,9 @@ module.exports = {
           const fileName = `${output}.${format}`,
             exportFile = fs.readFileSync(fileName)
 
-          fs.unlinkSync(fileName)
           resolve(exportFile)
         } else {
-          reject()
+          reject(errorMessages)
         }
       })
     })
