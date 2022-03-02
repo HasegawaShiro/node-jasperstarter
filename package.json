@@ -1,6 +1,6 @@
 {
   "name": "node-jasperstarter",
-  "version": "0.2.0",
+  "version": "0.2.3",
   "description": "generate jasper report by jasperstarter",
   "main": "index.js",
   "scripts": {

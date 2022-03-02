@@ -8,9 +8,9 @@ module.exports = {
     jrxml,
     jasper,
     output,
-    format,
+    format = "pdf",
     input,
-    type,
+    type = "json",
   }) {
     const processing = spawn(path.resolve(__dirname, './jasperstarter/bin/jasperstarter'), [
       "process", jasper,
