@@ -4,7 +4,7 @@
 
 A jasper report generator with jasperstarter.
 
-It can compile a .jrxml to .jasper (unfinished), and generate a report by jasper file.
+It can compile a .jrxml to .jasper, and generate a report by jasper file.
 
 **Only support JSON be data source currently.**
 
@@ -15,11 +15,11 @@ jasper libs version: 6.17.0
 ### support fonts
 
 - English: Serif, SansSerif
-- Traditional Chinese (English also too): [open-huninn(jf open 粉圓體)](https://github.com/justfont/open-huninn-font)
+- Traditional Chinese (English also too): GenSekiGothicTW.ttf from [GenSekiGothic(源石黑體)](https://github.com/ButTaiwan/genseki-font/releases) 
 
 ### methods
 
-#### generate({ jrxml, jasper, output, format, input, type }): Promise
+#### generate({ jrxml, jasper, output, format, input, type }): Promise\<Buffer\>
 
 - parameters
 
@@ -62,16 +62,36 @@ jasper libs version: 6.17.0
     // It will return some error messages here if generated error.
   })
   ```
-#### compile(jrxml) - *unfinished*
+#### compile(jrxml: string, output?: string)
   
+- parameters
+
+  - jrxml: Path of jrxml file which wants to be compiled
+
+  - output: *(optional)* The path where do you want the compiled jasper file be put
+
+- usage
+
+  ```js
+  const jasperstater = require("node-jasperstarter")
+  
+  jasperstarter.compile(
+    "/home/project/data/example.jrxml",
+    "/home/project/data/temp/test.jasper",
+  ).then((jasperPath) => {
+    // Something what you want to do.
+  }).catch((error) => {
+    // It will return some error messages here if compiled error.
+  })
+  ```
 
 ## 中文
 
 這是一個使用 jasperstarter 來生產 jasper 報表的工具。
 
-可以用來將 .jrxml 編譯成 .jasper(未完成)，並且可以透過 jasper 檔案來產生報表。
+可以把 .jrxml 編譯成 .jasper，並且可以透過 jasper 檔案來產生報表。
 
-**目前僅支援 JSON 作為資料來源。**
+**目前僅支援以 JSON 檔案作為資料來源。**
 
 jasper 函數庫版本: 6.17.0
 
@@ -80,7 +100,7 @@ jasper 函數庫版本: 6.17.0
 ### 支援字型
 
 - 英文: Serif, SansSerif
-- 繁體中文 (也支援英文): [open-huninn(jf open 粉圓體)](https://github.com/justfont/open-huninn-font)
+- 繁體中文 (也支援英文): GenSekiGothicTW.ttf from [GenSekiGothic(源石黑體)](https://github.com/ButTaiwan/genseki-font/releases)
 
 ### 方法
 
@@ -126,4 +146,25 @@ jasper 函數庫版本: 6.17.0
     // 如果有發生錯誤的話，會回傳錯誤訊息於此。
   })
   ```
-#### compile(jrxml) - *尚未完成*
+#### compile(jrxml: string, output?: string)
+  
+- 參數
+
+  - jrxml: 要編譯的 jrxml 檔案路徑
+
+  - output: *(選擇性的)* 編譯後的輸出路徑
+
+- 用法
+
+  ```js
+  const jasperstater = require("node-jasperstarter")
+  
+  jasperstarter.compile(
+    "/home/project/data/example.jrxml",
+    "/home/project/data/temp/test.jasper",
+  ).then((jasperPath) => {
+    // Something what you want to do.
+  }).catch((error) => {
+    // It will return some error messages here if compiled error.
+  })
+  ```
