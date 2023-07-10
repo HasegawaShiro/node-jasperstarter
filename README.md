@@ -47,7 +47,7 @@ jasper libs version: 6.17.0
 - usage
 
   ```js
-  const jasperstater = require("node-jasperstarter")
+  const jasperstarter = require("node-jasperstarter")
   
   jasperstarter.generate({
     jasper: "/home/project/data/example.jasper",
@@ -73,8 +73,6 @@ jasper libs version: 6.17.0
 - usage
 
   ```js
-  const jasperstater = require("node-jasperstarter")
-  
   jasperstarter.compile(
     "/home/project/data/example.jrxml",
     "/home/project/data/temp/test.jasper",
@@ -131,7 +129,7 @@ jasper 函數庫版本: 6.17.0
 
 - 用法
 	```js
-  const jasperstater = require("node-jasperstarter")
+  const jasperstarter = require("node-jasperstarter")
   
   jasperstarter.generate({
     jasper: "/home/project/data/example.jasper",
@@ -157,8 +155,6 @@ jasper 函數庫版本: 6.17.0
 - 用法
 
   ```js
-  const jasperstater = require("node-jasperstarter")
-  
   jasperstarter.compile(
     "/home/project/data/example.jrxml",
     "/home/project/data/temp/test.jasper",
