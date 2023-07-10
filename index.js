@@ -62,8 +62,8 @@ module.exports = {
   }) {
     if (
       (jrxml && !jasper) ||
-      (!fs.existsSync(jasper) && fs.existsSync(jasper.replace(".japser", ".jrxml")))
-    ) jasper = await module.exports.compile(jrxml || jasper.replace(".japser", ".jrxml"))
+      (!fs.existsSync(jasper) && fs.existsSync(jasper.replace(".jasper", ".jrxml")))
+    ) jasper = await module.exports.compile(jrxml || jasper.replace(".jasper", ".jrxml"))
 
     return new Promise((resolve, reject) => {
       spawnCommand("process", [
